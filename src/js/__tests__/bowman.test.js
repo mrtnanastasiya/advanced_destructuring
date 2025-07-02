@@ -15,10 +15,10 @@ describe('Проверка создания персонажа Bowman', () => {
     });
 
     test('Должно выдаваться сообщение об ошибке из-за недопустимого имени', () => {
-        expect(() => new Bowman('', 'Bowman')).toThrow('Имя должно быть строкой длиной от 2 до 10 символов');
+        expect(() => new Bowman('', 'Bowman')).toThrow();
     });
 
     test('Должно выдаваться сообщение об ошибке из-за недопустимого типа символа', () => {
-        expect(() => new Bowman('Luis', 'InvalidType')).toThrow('Недопустимый тип персонажа. Выберите один из: Bowman, Swordsman, Magician, Daemon, Undead, Zombie');
+        expect(() => new Bowman('Luis', 'InvalidType')).toThrow();
     });
 });

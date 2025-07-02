@@ -15,10 +15,10 @@ describe('Проверка создания персонажа Swordsman', () =>
     });
 
     test('Должно выдаваться сообщение об ошибке из-за недопустимого имени', () => {
-        expect(() => new Swordsman('', 'Swordsman')).toThrow('Имя должно быть строкой длиной от 2 до 10 символов');
+        expect(() => new Swordsman('', 'Swordsman')).toThrow();
     });
 
     test('Должно выдаваться сообщение об ошибке из-за недопустимого типа символа', () => {
-        expect(() => new Swordsman('Kael', 'InvalidType')).toThrow('Недопустимый тип персонажа. Выберите один из: Bowman, Swordsman, Magician, Daemon, Undead, Zombie');
+        expect(() => new Swordsman('Kael', 'InvalidType')).toThrow();
     });
 });

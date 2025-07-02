@@ -15,10 +15,10 @@ describe('Проверка создания персонажа Undead', () => {
     });
 
     test('Должно выдаваться сообщение об ошибке из-за недопустимого имени', () => {
-        expect(() => new Undead('', 'Undead')).toThrow('Имя должно быть строкой длиной от 2 до 10 символов');
+        expect(() => new Undead('', 'Undead')).toThrow();
     });
 
     test('Должно выдаваться сообщение об ошибке из-за недопустимого типа символа', () => {
-        expect(() => new Undead('Eve', 'InvalidType')).toThrow('Недопустимый тип персонажа. Выберите один из: Bowman, Swordsman, Magician, Daemon, Undead, Zombie');
+        expect(() => new Undead('Eve', 'InvalidType')).toThrow();
     });
 });

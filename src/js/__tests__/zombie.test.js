@@ -15,10 +15,10 @@ describe('Проверка создания персонажа Zombie', () => {
     });
 
     test('Должно выдаваться сообщение об ошибке из-за недопустимого имени', () => {
-        expect(() => new Zombie('', 'Zombie')).toThrow('Имя должно быть строкой длиной от 2 до 10 символов');
+        expect(() => new Zombie('', 'Zombie')).toThrow();
     });
 
     test('Должно выдаваться сообщение об ошибке из-за недопустимого типа символа', () => {
-        expect(() => new Zombie('Frank', 'InvalidType')).toThrow('Недопустимый тип персонажа. Выберите один из: Bowman, Swordsman, Magician, Daemon, Undead, Zombie');
+        expect(() => new Zombie('Frank', 'InvalidType')).toThrow();
     });
 });

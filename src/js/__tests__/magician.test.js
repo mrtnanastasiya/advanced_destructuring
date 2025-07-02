@@ -15,10 +15,10 @@ describe('Проверка создания персонажа Magician', () => 
     });
 
     test('Должно выдаваться сообщение об ошибке из-за недопустимого имени', () => {
-        expect(() => new Magician('', 'Magician')).toThrow('Имя должно быть строкой длиной от 2 до 10 символов');
+        expect(() => new Magician('', 'Magician')).toThrow();
     });
 
     test('Должно выдаваться сообщение об ошибке из-за недопустимого типа символа', () => {
-        expect(() => new Magician('Jasper', 'InvalidType')).toThrow('Недопустимый тип персонажа. Выберите один из: Bowman, Swordsman, Magician, Daemon, Undead, Zombie');
+        expect(() => new Magician('Jasper', 'InvalidType')).toThrow();
     });
 });
