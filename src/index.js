@@ -1,21 +1,13 @@
 
-import Bowman from './js/bowman.js';
-import Swordsman from './js/swordsman.js';
-import Magician from './js/magician.js';
-import Daemon from './js/daemon.js';
-import Undead from './js/undead.js';
-import Zombie from './js/zombie.js';
+import orderByProps from './js/orderbyprops.js';
 
-const bowman = new Bowman('Luis', 'Bowman');
-const swordsman = new Swordsman('Kael', 'Swordsman');
-const magician = new Magician('Jasper', 'Magician');
-const daemon = new Daemon('David', 'Daemon');
-const undead = new Undead('Eve', 'Undead');
-const zombie = new Zombie('Frank', 'Zombie');
+const obj = {
+    name: 'мечник',
+    health: 10,
+    level: 2,
+    attack: 80,
+    defence: 40
+};
 
-console.log(bowman);
-console.log(swordsman);
-console.log(magician);
-console.log(daemon);
-console.log(undead);
-console.log(zombie);
+const orderedProps = orderByProps(obj, ["name", "level"]);
+console.log(orderedProps);
